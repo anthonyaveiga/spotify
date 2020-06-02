@@ -90,9 +90,10 @@ CREATE TABLE `log` (
 );
 
 CREATE TABLE `played_tracks` (
+ `played_tracks_id` INT NOT NULL,
   `track_id` INT NOT NULL,
   `user_id` INT NOT NULL,
-  PRIMARY KEY (`track_id`, `user_id`)
+  PRIMARY KEY (`played_tracks_id`)
 );
 
 ALTER TABLE `account_type` ADD FOREIGN KEY (`ads_id`) REFERENCES `ads` (`ads_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
